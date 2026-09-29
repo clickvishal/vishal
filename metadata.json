@@ -1,0 +1,6 @@
+{
+  "name": "QuizNova",
+  "description": "Modern, engaging quiz platform for testing knowledge across science, history, geography, tech, and entertainment.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

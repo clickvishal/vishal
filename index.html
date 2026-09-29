@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      /* Ensure window.fetch has both a getter and setter to prevent read-only property assignment errors */
+      (function() {
+        try {
+          var origFetch = window.fetch;
+          var curFetch = origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() { return curFetch; },
+            set: function(fn) { curFetch = fn; },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          try {
+            var proto = Object.getPrototypeOf(window);
+            if (proto && Object.getOwnPropertyDescriptor(proto, 'fetch')) {
+              var pFetch = proto.fetch;
+              var curP = pFetch;
+              Object.defineProperty(proto, 'fetch', {
+                get: function() { return curP; },
+                set: function(fn) { curP = fn; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+    <title>QuizNova – Challenge Your Mind. Discover Something New.</title>
+    <meta
+      name="description"
+      content="Test your knowledge with fun, engaging quizzes across science, history, geography, tech, and entertainment on QuizNova."
+    />
+    <link rel="canonical" href="https://quiznova.app/" />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="QuizNova" />
+    <meta property="og:title" content="QuizNova – Challenge Your Mind. Discover Something New." />
+    <meta
+      property="og:description"
+      content="Test your knowledge with fun, engaging quizzes across science, history, geography, tech, and entertainment."
+    />
+    <meta property="og:url" content="https://quiznova.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QuizNova – Challenge Your Mind. Discover Something New." />
+    <meta
+      name="twitter:description"
+      content="Test your knowledge with fun, engaging quizzes across multiple categories."
+    />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "QuizNova",
+        "url": "https://quiznova.app",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "description": "Challenge your mind and test your knowledge with interactive quizzes across multiple categories.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#070b15] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

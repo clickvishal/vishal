@@ -1,0 +1,154 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile document storing basic account metadata.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "User full name"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "role": {
+          "type": "string",
+          "description": "User role: user or admin"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["name", "email", "role"]
+    },
+    "Admin": {
+      "title": "Admin",
+      "description": "Admin authorization record.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "Admin email"
+        },
+        "role": {
+          "type": "string",
+          "description": "Admin role"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["email", "role"]
+    },
+    "Quiz": {
+      "title": "Quiz",
+      "description": "A quiz containing title, metadata, category, and list of questions.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Quiz title"
+        },
+        "description": {
+          "type": "string",
+          "description": "Quiz description"
+        },
+        "category": {
+          "type": "string",
+          "description": "Quiz category"
+        },
+        "difficulty": {
+          "type": "string",
+          "description": "Easy, Medium, or Hard"
+        },
+        "questionCount": {
+          "type": "number",
+          "description": "Number of questions"
+        },
+        "estimatedTime": {
+          "type": "string",
+          "description": "Estimated time duration"
+        },
+        "coverImage": {
+          "type": "string",
+          "description": "URL to cover image"
+        },
+        "published": {
+          "type": "boolean",
+          "description": "Whether quiz is visible to public"
+        },
+        "featured": {
+          "type": "boolean",
+          "description": "Whether quiz is featured"
+        },
+        "questions": {
+          "type": "array",
+          "description": "List of quiz questions"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["title", "category", "difficulty", "published", "questions"]
+    },
+    "Result": {
+      "title": "Result",
+      "description": "User quiz attempt completion record.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "UID of the user who took the quiz"
+        },
+        "quizId": {
+          "type": "string",
+          "description": "ID of the quiz"
+        },
+        "quizTitle": {
+          "type": "string",
+          "description": "Title of the quiz"
+        },
+        "score": {
+          "type": "number",
+          "description": "Number of correct answers"
+        },
+        "totalQuestions": {
+          "type": "number",
+          "description": "Total questions in the quiz"
+        },
+        "percentage": {
+          "type": "number",
+          "description": "Score percentage"
+        },
+        "completedAt": {
+          "type": "string",
+          "description": "Completion timestamp"
+        }
+      },
+      "required": ["userId", "quizId", "quizTitle", "score", "totalQuestions", "percentage"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profile collection."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/Admin" },
+      "description": "Authorized admin users."
+    },
+    "/quizzes/{quizId}": {
+      "schema": { "$ref": "#/entities/Quiz" },
+      "description": "All platform quizzes."
+    },
+    "/results/{resultId}": {
+      "schema": { "$ref": "#/entities/Result" },
+      "description": "User quiz submission results."
+    }
+  }
+}
