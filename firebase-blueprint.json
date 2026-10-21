@@ -131,6 +131,23 @@
         }
       },
       "required": ["userId", "quizId", "quizTitle", "score", "totalQuestions", "percentage"]
+    },
+    "PdfImport": {
+      "title": "PdfImport",
+      "description": "Track PDF import and extraction jobs.",
+      "type": "object",
+      "properties": {
+        "fileName": { "type": "string" },
+        "fileSize": { "type": "number" },
+        "pageCount": { "type": "number" },
+        "status": { "type": "string" },
+        "quizTitle": { "type": "string" },
+        "quizCategory": { "type": "string" },
+        "totalExtracted": { "type": "number" },
+        "validCount": { "type": "number" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["fileName", "status", "createdAt"]
     }
   },
   "firestore": {
@@ -149,6 +166,10 @@
     "/results/{resultId}": {
       "schema": { "$ref": "#/entities/Result" },
       "description": "User quiz submission results."
+    },
+    "/pdf_imports/{importId}": {
+      "schema": { "$ref": "#/entities/PdfImport" },
+      "description": "PDF import and extraction jobs."
     }
   }
 }

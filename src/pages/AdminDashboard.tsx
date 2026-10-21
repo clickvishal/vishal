@@ -56,7 +56,7 @@ export const AdminDashboard: React.FC = () => {
             Unauthorized Access
           </h1>
           <p className="text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
-            You do not have administrative permissions to view or manage the Quiz Nova administrative dashboard.
+            You do not have administrative permissions to view or manage the CivilMates administrative dashboard.
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -113,22 +113,33 @@ export const AdminDashboard: React.FC = () => {
             <span>Admin Management Console · Firebase Connected</span>
           </div>
           <h1 className="font-display text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Quiz Nova Admin Dashboard
+            CivilMates Admin Dashboard
           </h1>
           <p className="text-xs text-slate-400 mt-1">
             Logged in as <strong className="text-slate-200">{firebaseUser?.email}</strong> (Verified Administrator)
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {!isNewQuizRoute && (
-            <button
-              onClick={() => navigate('/admin/quizzes/new')}
-              className="px-5 py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-full transition-colors cursor-pointer flex items-center gap-1.5 shadow-md"
-            >
-              <Plus className="w-4 h-4" />
-              <span>Add New Quiz</span>
-            </button>
+            <>
+              <button
+                onClick={() => navigate('/admin/pdf-import')}
+                className="px-5 py-2.5 text-xs font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-indigo-500 hover:from-purple-500 hover:to-indigo-400 rounded-full transition-all cursor-pointer flex items-center gap-1.5 shadow-md"
+                title="Automatically extract and import MCQs from PDF using AI"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>PDF Quiz Import</span>
+              </button>
+
+              <button
+                onClick={() => navigate('/admin/quizzes/new')}
+                className="px-5 py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-full transition-colors cursor-pointer flex items-center gap-1.5 shadow-md"
+              >
+                <Plus className="w-4 h-4" />
+                <span>Add New Quiz</span>
+              </button>
+            </>
           )}
 
           <button

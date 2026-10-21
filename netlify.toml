@@ -1,0 +1,24 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/pdf/inspect"
+  to = "/.netlify/functions/inspect"
+  status = 200
+
+[[redirects]]
+  from = "/api/pdf/extract-chunk"
+  to = "/.netlify/functions/extract-chunk"
+  status = 200
+
+[[redirects]]
+  from = "/api/pdf/validate-duplicates"
+  to = "/.netlify/functions/validate"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

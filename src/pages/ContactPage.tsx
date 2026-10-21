@@ -23,7 +23,7 @@ export const ContactPage: React.FC = () => {
           <span>Get in Touch</span>
         </div>
         <h1 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Contact Quiz Nova
+          Contact CivilMates
         </h1>
         <p className="text-sm text-slate-400 max-w-lg mx-auto">
           Have a question about a quiz question, a suggestion for new categories, or feedback? We’d love to hear from you.
@@ -38,7 +38,7 @@ export const ContactPage: React.FC = () => {
               <CheckCircle2 className="w-12 h-12 text-emerald-400 mx-auto" />
               <h3 className="font-display text-xl font-bold text-white">Message Received!</h3>
               <p className="text-xs text-slate-400 max-w-sm mx-auto">
-                Thank you for reaching out to the Quiz Nova team. We value your feedback and will respond to your inquiry shortly.
+                Thank you for reaching out to the CivilMates team. We value your feedback and will respond to your inquiry shortly.
               </p>
               <button
                 onClick={() => {
@@ -125,7 +125,7 @@ export const ContactPage: React.FC = () => {
               <div>
                 <h4 className="font-semibold text-slate-200">Are all quizzes free to take?</h4>
                 <p className="text-slate-400 mt-0.5 leading-relaxed">
-                  Yes, every quiz and explanation on Quiz Nova is 100% free and open to everyone.
+                  Yes, every quiz and explanation on CivilMates is 100% free and open to everyone.
                 </p>
               </div>
               <div className="border-t border-slate-800 pt-2">
@@ -150,10 +150,10 @@ export const ContactPage: React.FC = () => {
             <div>
               <span className="block text-[11px] text-slate-400 font-medium">Direct Inquiries</span>
               <a
-                href="mailto:contact@quiznova.app"
+                href="mailto:contact@civilmates.app"
                 className="text-xs font-semibold text-indigo-400 hover:underline"
               >
-                contact@quiznova.app
+                contact@civilmates.app
               </a>
             </div>
           </div>

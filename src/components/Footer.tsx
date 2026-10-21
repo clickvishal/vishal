@@ -1,6 +1,7 @@
 import React from 'react';
 import { useRouter, Link } from '../router/Router';
 import { Sparkles } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 export const Footer: React.FC = () => {
   const { navigate } = useRouter();
@@ -16,7 +17,7 @@ export const Footer: React.FC = () => {
                 <Sparkles className="w-3.5 h-3.5" />
               </div>
               <span className="font-display text-lg font-bold tracking-tight text-white">
-                Quiz Nova
+                CivilMates
               </span>
             </Link>
             <p className="text-xs text-slate-400 leading-relaxed">
@@ -75,7 +76,7 @@ export const Footer: React.FC = () => {
                   onClick={() => navigate('/about')}
                   className="hover:text-white transition-colors cursor-pointer"
                 >
-                  About Quiz Nova
+                  About CivilMates
                 </button>
               </li>
               <li>
@@ -130,7 +131,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-slate-800/80 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Quiz Nova. All rights reserved. Built for knowledge seekers.</p>
+          <p>© {new Date().getFullYear()} CivilMates. All rights reserved. Built for knowledge seekers.</p>
           <div className="flex items-center gap-4 text-slate-400 text-xs">
             <button
               onClick={() => navigate('/privacy-policy')}
@@ -152,6 +153,8 @@ export const Footer: React.FC = () => {
             >
               Disclaimer
             </button>
+            <span aria-hidden="true">·</span>
+            <ThemeToggle showLabel className="text-xs py-1 px-2.5" />
           </div>
         </div>
       </div>

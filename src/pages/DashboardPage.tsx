@@ -113,7 +113,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onOpenAuth }) => {
             </div>
             <p className="text-xs text-slate-400">{userProfile.email}</p>
             <p className="text-xs text-slate-500">
-              Joined {userProfile.joinedDate} · Quiz Nova Explorer
+              Joined {userProfile.joinedDate} · CivilMates Explorer
             </p>
           </div>
         </div>

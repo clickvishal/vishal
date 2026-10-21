@@ -97,7 +97,7 @@ export const AdminLoginPage: React.FC = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@quiznova.app"
+                placeholder="admin@civilmates.app"
                 className="w-full pl-9 pr-3 py-2.5 text-xs bg-[#090d1a] border border-slate-800 rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                 required
               />

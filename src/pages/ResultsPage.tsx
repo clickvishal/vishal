@@ -87,13 +87,13 @@ export const ResultsPage: React.FC = () => {
   const performance = getPerformanceMessage(percentage);
 
   const handleShare = async () => {
-    const shareText = `I scored ${score}/${totalQuestions} (${percentage}%) on the "${quiz.title}" on QuizNova! Can you beat my score?`;
+    const shareText = `I scored ${score}/${totalQuestions} (${percentage}%) on the "${quiz.title}" on CivilMates! Can you beat my score?`;
     const shareUrl = window.location.origin + `/quiz/${quiz.id}`;
 
     if (navigator.share) {
       try {
         await navigator.share({
-          title: `My QuizNova Score: ${quiz.title}`,
+          title: `My CivilMates Score: ${quiz.title}`,
           text: shareText,
           url: shareUrl,
         });

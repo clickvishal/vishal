@@ -406,7 +406,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const userProfile: UserProfile = {
     id: user?.id || 'guest',
     name: user?.name || 'Guest User',
-    email: user?.email || 'guest@quiznova.app',
+    email: user?.email || 'guest@civilmates.app',
     avatar:
       user?.avatar ||
       'https://api.dicebear.com/7.x/avataaars/svg?seed=Guest&backgroundColor=e2e8f0',

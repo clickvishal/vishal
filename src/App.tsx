@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { QuizProvider } from './context/QuizContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { RouterProvider, useRouter } from './router/Router';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -19,6 +20,7 @@ import { ResultsPage } from './pages/ResultsPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { AdminDashboard } from './pages/AdminDashboard';
 import { AdminLoginPage } from './pages/AdminLoginPage';
+import { PdfQuizImportPage } from './pages/PdfQuizImportPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import {
@@ -63,6 +65,9 @@ const AppContent: React.FC = () => {
     if (currentPath === '/admin/login') {
       return <AdminLoginPage />;
     }
+    if (currentPath === '/admin/pdf-import') {
+      return <PdfQuizImportPage />;
+    }
     if (currentPath === '/admin' || currentPath.startsWith('/admin/')) {
       return <AdminDashboard />;
     }
@@ -86,7 +91,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#070b15] text-slate-100 selection:bg-indigo-500 selection:text-white">
+    <div className="flex flex-col min-h-screen bg-[#070b15] text-slate-100 selection:bg-indigo-500 selection:text-white transition-colors duration-200">
       {/* Top Header */}
       <Header
         onOpenAuth={handleOpenAuth}
@@ -118,10 +123,12 @@ const AppContent: React.FC = () => {
 
 export default function App() {
   return (
-    <QuizProvider>
-      <RouterProvider>
-        <AppContent />
-      </RouterProvider>
-    </QuizProvider>
+    <ThemeProvider>
+      <QuizProvider>
+        <RouterProvider>
+          <AppContent />
+        </RouterProvider>
+      </QuizProvider>
+    </ThemeProvider>
   );
 }

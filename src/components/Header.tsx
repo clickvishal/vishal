@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter, Link } from '../router/Router';
 import { useQuiz } from '../context/QuizContext';
+import { ThemeToggle } from './ThemeToggle';
 import {
   Sparkles,
   Home,
@@ -43,17 +44,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenSearch }) => {
     <header className="sticky top-0 z-40 bg-[#070b15]/85 backdrop-blur-md border-b border-slate-800/80 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18">
-          {/* Left Zone: Quiz Nova Brand Lockup */}
+          {/* Left Zone: CivilMates Brand Lockup */}
           <Link
             to="/"
             className="flex items-center gap-2.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-lg"
-            title="Quiz Nova Home"
+            title="CivilMates Home"
           >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 via-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md border border-indigo-400/30 group-hover:scale-105 transition-transform">
               <Sparkles className="w-4 h-4 fill-white/20" />
             </div>
             <span className="font-display text-xl font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors">
-              Quiz Nova
+              CivilMates
             </span>
           </Link>
 
@@ -94,6 +95,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenSearch }) => {
               <Search className="w-3.5 h-3.5 text-slate-400" />
               <span>Search...</span>
             </button>
+
+            {/* Dark/Light Mode Theme Toggle */}
+            <ThemeToggle />
 
             {/* Admin discrete button (Only shown to authenticated admins) */}
             {isAdmin && (
@@ -155,6 +159,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenSearch }) => {
                       <Settings className="w-3.5 h-3.5 text-slate-400" />
                       Admin Management
                     </button>
+                    {isAdmin && (
+                      <button
+                        onClick={() => {
+                          navigate('/admin/pdf-import');
+                          setProfileDropdownOpen(false);
+                        }}
+                        className="w-full text-left px-3 py-2 text-xs text-indigo-300 hover:bg-slate-800/80 flex items-center gap-2 transition-colors cursor-pointer"
+                      >
+                        <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                        PDF Quiz Import
+                      </button>
+                    )}
                     <div className="my-1 border-t border-slate-800" />
                     <button
                       onClick={() => {
@@ -250,7 +266,26 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAuth, onOpenSearch }) => {
               <Settings className="w-4 h-4" />
               <span>Admin Dashboard UI</span>
             </button>
+            {isAdmin && (
+              <button
+                onClick={() => handleNavClick('/admin/pdf-import')}
+                className={`text-left px-3 py-2 rounded-xl text-sm font-medium transition-colors flex items-center gap-2.5 ${
+                  currentPath === '/admin/pdf-import'
+                    ? 'bg-indigo-600 text-white'
+                    : 'text-indigo-300 hover:bg-slate-800/60'
+                }`}
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>PDF Quiz Import</span>
+              </button>
+            )}
           </nav>
+
+          {/* Theme switcher row in mobile menu */}
+          <div className="flex items-center justify-between p-2.5 bg-[#0e1628] rounded-xl border border-slate-800">
+            <span className="text-xs font-semibold text-slate-300">Appearance</span>
+            <ThemeToggle showLabel />
+          </div>
 
           <div className="pt-3 border-t border-slate-800">
             {user ? (

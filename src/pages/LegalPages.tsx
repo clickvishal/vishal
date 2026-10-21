@@ -30,7 +30,7 @@ export const PrivacyPolicyPage: React.FC = () => {
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">1. Information We Collect</h2>
           <p>
-            Quiz Nova is designed with privacy-first principles. We collect minimal information required to deliver high-quality quiz experiences:
+            CivilMates is designed with privacy-first principles. We collect minimal information required to deliver high-quality quiz experiences:
           </p>
           <ul className="list-disc pl-5 space-y-1 text-xs text-slate-400">
             <li><strong>Local Quiz State:</strong> Your selected answers and quiz completion tallies are stored locally in your browser storage.</li>
@@ -49,14 +49,14 @@ export const PrivacyPolicyPage: React.FC = () => {
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">3. Cookies and Local Storage</h2>
           <p>
-            Quiz Nova uses standard browser LocalStorage to remember your active quiz settings and score history without invasive tracking cookies. You may clear your LocalStorage at any time through your browser preferences.
+            CivilMates uses standard browser LocalStorage to remember your active quiz settings and score history without invasive tracking cookies. You may clear your LocalStorage at any time through your browser preferences.
           </p>
         </section>
 
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">4. Contacting Us</h2>
           <p>
-            For any privacy inquiries or data removal requests, please reach out to our privacy coordinator at <strong>privacy@quiznova.app</strong>.
+            For any privacy inquiries or data removal requests, please reach out to our privacy coordinator at <strong>privacy@civilmates.app</strong>.
           </p>
         </section>
       </div>
@@ -92,14 +92,14 @@ export const TermsPage: React.FC = () => {
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">1. Acceptance of Terms</h2>
           <p>
-            By accessing or playing quizzes on Quiz Nova, you agree to comply with and be bound by these Terms & Conditions. If you do not agree, please discontinue using the service.
+            By accessing or playing quizzes on CivilMates, you agree to comply with and be bound by these Terms & Conditions. If you do not agree, please discontinue using the service.
           </p>
         </section>
 
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">2. Intellectual Property</h2>
           <p>
-            All original quiz questions, explanations, branding, artwork, and website interfaces are the intellectual property of Quiz Nova. Users are granted a personal, non-commercial, revocable license to access the platform for educational and entertainment purposes.
+            All original quiz questions, explanations, branding, artwork, and website interfaces are the intellectual property of CivilMates. Users are granted a personal, non-commercial, revocable license to access the platform for educational and entertainment purposes.
           </p>
         </section>
 
@@ -113,7 +113,7 @@ export const TermsPage: React.FC = () => {
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">4. Modifications to Service</h2>
           <p>
-            Quiz Nova reserves the right to modify or discontinue quizzes, categories, or features at any time to improve educational quality and user experience.
+            CivilMates reserves the right to modify or discontinue quizzes, categories, or features at any time to improve educational quality and user experience.
           </p>
         </section>
       </div>
@@ -149,7 +149,7 @@ export const DisclaimerPage: React.FC = () => {
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">1. Educational & Entertainment Purposes</h2>
           <p>
-            Quiz Nova is strictly intended for personal educational, trivia, and entertainment purposes. While our editorial team strives for meticulous factual accuracy in every question and explanation, information is provided on an "as-is" basis without warranties of completeness or definitive professional advice.
+            CivilMates is strictly intended for personal educational, trivia, and entertainment purposes. While our editorial team strives for meticulous factual accuracy in every question and explanation, information is provided on an "as-is" basis without warranties of completeness or definitive professional advice.
           </p>
         </section>
 
@@ -163,7 +163,7 @@ export const DisclaimerPage: React.FC = () => {
         <section className="space-y-2">
           <h2 className="font-display text-base font-bold text-white">3. Policy & Compliance Statement</h2>
           <p>
-            Quiz Nova makes no guarantees of income, website traffic, financial outcomes, or third-party approvals. Quiz Nova does not engage in artificial engagement tactics, click encouragement, or deceptive claims. All platform content is designed to be transparent, honest, and helpful.
+            CivilMates makes no guarantees of income, website traffic, financial outcomes, or third-party approvals. CivilMates does not engage in artificial engagement tactics, click encouragement, or deceptive claims. All platform content is designed to be transparent, honest, and helpful.
           </p>
         </section>
 

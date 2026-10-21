@@ -114,12 +114,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <div className="w-6 h-6 rounded-md bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center text-white">
             <Sparkles className="w-3.5 h-3.5" />
           </div>
-          <span className="font-display text-sm font-bold tracking-tight text-white">Quiz Nova</span>
+          <span className="font-display text-sm font-bold tracking-tight text-white">CivilMates</span>
         </div>
 
         <h3 id="auth-modal-title" className="text-xl font-bold text-white mb-1">
           {tab === 'login'
-            ? 'Sign in to Quiz Nova'
+            ? 'Sign in to CivilMates'
             : tab === 'signup'
             ? 'Create an Account'
             : 'Reset Password'}
@@ -258,7 +258,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 <span>Processing...</span>
               </>
             ) : tab === 'login' ? (
-              'Sign In to Quiz Nova'
+              'Sign In to CivilMates'
             ) : tab === 'signup' ? (
               'Create Account'
             ) : (

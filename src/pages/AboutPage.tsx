@@ -14,23 +14,23 @@ export const AboutPage: React.FC = () => {
           <span>Our Mission & Vision</span>
         </div>
         <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-          About Quiz Nova
+          About CivilMates
         </h1>
         <p className="text-base text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          Quiz Nova was built to cultivate curiosity, celebrate factual knowledge, and make lifelong learning an engaging, daily intellectual habit.
+          CivilMates was built to cultivate curiosity, celebrate factual knowledge, and make lifelong learning an engaging, daily intellectual habit.
         </p>
       </div>
 
       {/* Story Card */}
       <div className="bg-[#0e1424] rounded-3xl border border-slate-800 shadow-xl p-6 sm:p-10 space-y-6">
         <h2 className="font-display text-xl sm:text-2xl font-bold text-white">
-          The Purpose Behind Quiz Nova
+          The Purpose Behind CivilMates
         </h2>
         <p className="text-sm text-slate-300 leading-relaxed">
-          In an era flooded with brief soundbites and passive content consumption, true knowledge requires active recall. Quiz Nova provides an intuitive, high-quality quiz platform where people of all ages can test their intellect across core human disciplines—from the frontiers of modern science and astrophysics to world history, literature, geography, and computational logic.
+          In an era flooded with brief soundbites and passive content consumption, true knowledge requires active recall. CivilMates provides an intuitive, high-quality quiz platform where people of all ages can test their intellect across core human disciplines—from the frontiers of modern science and astrophysics to world history, literature, geography, and computational logic.
         </p>
         <p className="text-sm text-slate-300 leading-relaxed">
-          Every single quiz question on Quiz Nova is crafted with four verified options, factual accuracy, and a comprehensive explanation to ensure that every question solved is an opportunity to learn something new.
+          Every single quiz question on CivilMates is crafted with four verified options, factual accuracy, and a comprehensive explanation to ensure that every question solved is an opportunity to learn something new.
         </p>
       </div>
 
